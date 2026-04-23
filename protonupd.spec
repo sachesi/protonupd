@@ -3,7 +3,7 @@
 
 Name:           protonupd
 Version:        3.0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Download and install Proton releases with centralized storage
 License:        GPL-3.0-or-later
 URL:            https://github.com/sachesi/protonupd
