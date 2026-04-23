@@ -1,0 +1,8 @@
+complete -c protonupd -l help -d 'Show help'
+complete -c protonupd -l configure -d 'Re-run interactive configuration wizard'
+complete -c protonupd -l remove-old -d 'Remove all old versions except latest and locked'
+complete -c protonupd -l lock -r -d 'Lock a specific version (SLUG:TAG)'
+complete -c protonupd -l unlock -r -d 'Unlock a specific version (SLUG:TAG)'
+complete -c protonupd -l list -d 'List installed Proton versions'
+complete -c protonupd -l list-remote -r -a 'ge-proton dw-proton cachyos-proton em-proton umu' -d 'List upstream releases for slug'
+complete -c protonupd -l download -r -d 'Download and install a specific version (SLUG:TAG)'
