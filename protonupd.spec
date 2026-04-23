@@ -37,11 +37,16 @@ install -Dm644 assets/usr/share/fish/completions/%{name}.fish \
 %files -f %{pyproject_files}
 %license LICENSE
 %doc README.md
+%{_bindir}/%{name}
 %{_datadir}/bash-completion/completions/%{name}
 %{_datadir}/zsh/site-functions/_%{name}
 %{_datadir}/fish/completions/%{name}.fish
 
 %changelog
+* Thu Apr 23 2026 protonupd packager <packager@protonupd> - 3.0.0-2
+- Include /usr/bin/protonupd in %%files to fix unpackaged file error
+- Switch pyproject license to SPDX string and drop deprecated classifier
+
 * Thu Apr 23 2026 protonupd packager <packager@protonupd> - 3.0.0-1
 - Add Fedora RPM spec and COPR SRPM workflow
 - Install shell completions from assets/usr/share
