@@ -27,21 +27,21 @@ central store, then symlink them into Steam, Bottles, and Lutris paths.
 %pyproject_install
 %pyproject_save_files protonupd
 
-install -Dm644 assets/usr/share/completions/bash/%{name} \
+install -Dm644 assets/usr/share/bash-completion/completions/%{name} \
     %{buildroot}%{_datadir}/bash-completion/completions/%{name}
-install -Dm644 assets/usr/share/completions/zsh/_%{name} \
+install -Dm644 assets/usr/share/zsh/site-functions/_%{name} \
     %{buildroot}%{_datadir}/zsh/site-functions/_%{name}
-install -Dm644 assets/usr/share/completions/fish/%{name}.fish \
-    %{buildroot}%{_datadir}/fish/vendor_completions.d/%{name}.fish
+install -Dm644 assets/usr/share/fish/completions/%{name}.fish \
+    %{buildroot}%{_datadir}/fish/completions/%{name}.fish
 
 %files -f %{pyproject_files}
 %license LICENSE
 %doc README.md
 %{_datadir}/bash-completion/completions/%{name}
 %{_datadir}/zsh/site-functions/_%{name}
-%{_datadir}/fish/vendor_completions.d/%{name}.fish
+%{_datadir}/fish/completions/%{name}.fish
 
 %changelog
 * Thu Apr 23 2026 protonupd packager <packager@protonupd> - 3.0.0-1
 - Add Fedora RPM spec and COPR SRPM workflow
-- Install shell completions from assets/usr/share/completions
+- Install shell completions from assets/usr/share
