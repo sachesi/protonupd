@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           protonupd
-Version:        3.0.0
+Version:        3.0.1
 Release:        1%{?dist}
 Summary:        Download and install Proton releases with centralized storage
 License:        GPL-3.0-or-later
@@ -43,6 +43,9 @@ install -Dm644 assets/usr/share/fish/completions/%{name}.fish \
 %{_datadir}/fish/completions/%{name}.fish
 
 %changelog
+* Thu Apr 23 2026 protonupd packager <packager@protonupd> - 3.0.1-1
+- Bump version to 3.0.1
+
 * Thu Apr 23 2026 protonupd packager <packager@protonupd> - 3.0.0-2
 - Include /usr/bin/protonupd in %%files to fix unpackaged file error
 - Switch pyproject license to SPDX string and drop deprecated classifier
