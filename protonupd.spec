@@ -3,7 +3,7 @@
 
 Name:           protonupd
 Version:        3.0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Download and install Proton releases with centralized storage
 License:        GPL-3.0-or-later
 URL:            https://github.com/sachesi/protonupd
@@ -12,6 +12,11 @@ BuildArch:      noarch
 
 BuildRequires:  python3-devel
 BuildRequires:  pyproject-rpm-macros
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(wheel)
+
+%generate_buildrequires
+%pyproject_buildrequires
 
 %description
 protonupd is a CLI tool to download and install Proton builds into one
