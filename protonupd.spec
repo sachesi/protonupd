@@ -12,6 +12,11 @@ BuildArch:      noarch
 
 BuildRequires:  python3-devel
 BuildRequires:  pyproject-rpm-macros
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(wheel)
+
+%generate_buildrequires
+%pyproject_buildrequires
 
 %description
 protonupd is a CLI tool to download and install Proton builds into one
