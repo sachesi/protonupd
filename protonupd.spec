@@ -5,7 +5,7 @@ Name:           protonupd
 Version:        3.0.0
 Release:        1%{?dist}
 Summary:        Download and install Proton releases with centralized storage
-License:        MIT
+License:        GPL-3.0-or-later
 URL:            https://github.com/sachesi/protonupd
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
@@ -46,6 +46,7 @@ install -Dm644 assets/usr/share/fish/completions/%{name}.fish \
 * Thu Apr 23 2026 protonupd packager <packager@protonupd> - 3.0.0-2
 - Include /usr/bin/protonupd in %%files to fix unpackaged file error
 - Switch pyproject license to SPDX string and drop deprecated classifier
+- Fix License
 
 * Thu Apr 23 2026 protonupd packager <packager@protonupd> - 3.0.0-1
 - Add Fedora RPM spec and COPR SRPM workflow
