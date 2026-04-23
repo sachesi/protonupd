@@ -35,6 +35,6 @@ protonupd = "protonupd:main"
 py-modules = ["protonupd"]
 
 [tool.setuptools.data-files]
-"share/bash-completion/completions" = ["completions/protonupd.bash"]
-"share/zsh/site-functions" = ["completions/_protonupd"]
-"share/fish/vendor_completions.d" = ["completions/protonupd.fish"]
+"share/bash-completion/completions" = ["assets/usr/share/completions/bash/protonupd"]
+"share/zsh/site-functions" = ["assets/usr/share/completions/zsh/_protonupd"]
+"share/fish/vendor_completions.d" = ["assets/usr/share/completions/fish/protonupd.fish"]
