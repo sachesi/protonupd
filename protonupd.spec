@@ -2,8 +2,8 @@
 %define debug_package %{nil}
 
 Name:           protonupd
-Version:        3.0.1
-Release:        3%{?dist}
+Version:        3.0.2
+Release:        1%{?dist}
 Summary:        Download and install Proton releases with centralized storage
 License:        GPL-3.0-or-later
 URL:            https://github.com/sachesi/protonupd
@@ -48,6 +48,11 @@ install -Dm644 assets/usr/share/fish/vendor_completions.d/%{name}.fish \
 %{_datadir}/fish/vendor_completions.d/%{name}.fish
 
 %changelog
+* Fri Apr 24 2026 protonupd packager <packager@protonupd> - 3.0.2-1
+- Refactor CLI into src/protonupd modules split by logic
+- Keep tar extraction safety checks and tighten versioned User-Agent
+- Bump package metadata to 3.0.2
+
 * Fri Apr 24 2026 protonupd packager <packager@protonupd> - 3.0.1-3
 - Fix fish completion path to use vendor_completions.d
 - Add Makefile for local workflow
