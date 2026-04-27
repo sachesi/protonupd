@@ -3,7 +3,7 @@
 
 Name:           protonupd
 Version:        3.0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Download and install Proton releases with centralized storage
 License:        GPL-3.0-or-later
 URL:            https://github.com/sachesi/protonupd
@@ -14,9 +14,6 @@ BuildRequires:  python3-devel
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(wheel)
-
-%generate_buildrequires
-%pyproject_buildrequires
 
 %description
 protonupd is a CLI tool to download and install Proton builds into one
@@ -48,6 +45,9 @@ install -Dm644 assets/usr/share/fish/vendor_completions.d/%{name}.fish \
 %{_datadir}/fish/vendor_completions.d/%{name}.fish
 
 %changelog
+* Mon Apr 27 2026 protonupd packager <packager@protonupd> - 3.0.2-2
+- Consolidate build logic into root Makefile
+
 * Fri Apr 24 2026 protonupd packager <packager@protonupd> - 3.0.2-1
 - Refactor CLI into src/protonupd modules split by logic
 - Keep tar extraction safety checks and tighten versioned User-Agent
