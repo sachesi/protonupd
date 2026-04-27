@@ -14,6 +14,7 @@ BuildRequires:  python3-devel
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(wheel)
+BuildRequires:  python3-pip
 
 %description
 protonupd is a CLI tool to download and install Proton builds into one
@@ -47,6 +48,7 @@ install -Dm644 assets/usr/share/fish/vendor_completions.d/%{name}.fish \
 %changelog
 * Mon Apr 27 2026 protonupd packager <packager@protonupd> - 3.0.2-2
 - Consolidate build logic into root Makefile
+- Add missing BuildRequires: python3-pip for %%pyproject_wheel in COPR
 
 * Fri Apr 24 2026 protonupd packager <packager@protonupd> - 3.0.2-1
 - Refactor CLI into src/protonupd modules split by logic
