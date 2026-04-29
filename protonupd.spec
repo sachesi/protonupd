@@ -2,8 +2,8 @@
 %define debug_package %{nil}
 
 Name:           protonupd
-Version:        3.0.2
-Release:        2%{?dist}
+Version:        3.0.3
+Release:        1%{?dist}
 Summary:        Download and install Proton releases with centralized storage
 License:        GPL-3.0-or-later
 URL:            https://github.com/sachesi/protonupd
@@ -46,6 +46,10 @@ install -Dm644 assets/usr/share/fish/vendor_completions.d/%{name}.fish \
 %{_datadir}/fish/vendor_completions.d/%{name}.fish
 
 %changelog
+* Mon Apr 27 2026 protonupd packager <packager@protonupd> - 3.0.3-1
+- pyproject.toml - fix license
+- bump version to 3.0.3
+
 * Mon Apr 27 2026 protonupd packager <packager@protonupd> - 3.0.2-2
 - Consolidate build logic into root Makefile
 - Add missing BuildRequires: python3-pip for %%pyproject_wheel in COPR
