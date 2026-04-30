@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           protonupd
-Version:        3.0.4
+Version:        3.0.5
 Release:        1%{?dist}
 Summary:        Download and install Proton releases with centralized storage
 License:        GPL-3.0-or-later
@@ -46,10 +46,10 @@ install -Dm644 assets/usr/share/fish/vendor_completions.d/%{name}.fish \
 %{_datadir}/fish/vendor_completions.d/%{name}.fish
 
 %changelog
-* Thu Apr 30 2026 sachesi <xsachesi@proton.me> - 3.0.4-1
+* Thu Apr 30 2026 sachesi <xsachesi@proton.me> - 3.0.5-1
 - Add latest and slug-latest symlinks to destination paths
 - Update README and add docs/USAGE.md
-- Built with Gemini
+- Add Nix flake and direnv support
 
 
 * Mon Apr 27 2026 sachesi <xsachesi@proton.me> - 3.0.3-1
