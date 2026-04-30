@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "protonupd"
-version = "3.0.3"
+version = "3.0.5"
 description = "Download and install Proton releases with centralized storage and symlink management"
 readme = "README.md"
 requires-python = ">=3.9"
 license = "GPL-3.0-or-later"
 authors = [
-  { name = "protonupd contributors" }
+  { name = "sachesi", email = "xsachesi@proton.me" }
 ]
 keywords = ["proton", "steam", "lutris", "bottles", "gaming"]
 classifiers = [
